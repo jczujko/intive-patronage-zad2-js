@@ -21,7 +21,6 @@ function countMovies() {
 function parseMovies() {
     console.log("Parsing movies...")
     let moviesUnorderedList = document.getElementById("moviesList");
-    delete moviesUnorderedList.children;
     moviesList.movies.forEach(element => {
         let movieListItem = document.createElement("li");
         let moviePictogram = document.createElement("img");
