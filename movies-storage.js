@@ -66,36 +66,35 @@ class MoviesStorage {
         }
     }
 
-    moviesStorageSync(moviesList) {
-        localStorage.setItem("movies", moviesList);
+    moviesStorageSync() {
+        localStorage.setItem("movies", JSON.stringify(this.movies));
     }
-
-    moviesListRefresh() {
-        this.movies = localStorage.getItem(JSON.parse(localStorage.getItem("movies")))
-    }
-
-    get() {
-
-    };
 
     get(id) {
-
+        if (arguments.length === 0) {
+            return this.movies;
+        }
+        return this.movies.find(element => element.id === id)
     }
 
-    set(data) {
 
-    }
-
-    set(id, data) {
-
+    set(arg1, arg2) {
+        if (arguments.length === 1) {
+            this.movies[this.movies.length] = arg1;
+        } else {
+            this.movies[this.movies.findIndex(element => element.id === arg1)] = arg2;
+            this.get(arg1);
+        }
+        this.moviesStorageSync();
     }
 
     remove(id) {
-
+        let index = this.movies.findIndex(element => element.id === id);
+        console.log(index);
+        this.movies.splice(index, 1);
+        this.moviesStorageSync();
     }
 
 }
-
-
 
 export default MoviesStorage;

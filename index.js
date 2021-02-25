@@ -21,6 +21,7 @@ function countMovies() {
 function parseMovies() {
     console.log("Parsing movies...")
     let moviesUnorderedList = document.getElementById("moviesList");
+    delete moviesUnorderedList.children;
     moviesList.movies.forEach(element => {
         let movieListItem = document.createElement("li");
         let moviePictogram = document.createElement("img");
@@ -50,15 +51,14 @@ function doMagic(elem) {
     if (moviesList.movies[item].seen === "T") {
         elem.setAttribute("src", "not-seen.png");
         moviesList.movies[item].seen = "F";
-        moviesCounterSeen.innerText = parseInt(moviesCounterSeen.innerText) - 1;
+        setCounterTo(moviesCounterSeen, (parseInt(moviesCounterSeen.innerText) - 1));
     } else if (moviesList.movies[item].seen === "F") {
         elem.setAttribute("src", "seen.png");
         moviesList.movies[item].seen = "T";
-        moviesCounterSeen.innerText = parseInt(moviesCounterSeen.innerText) + 1;
+        setCounterTo(moviesCounterSeen, (parseInt(moviesCounterSeen.innerText) + 1));
     }
 }
 
 window.doMagic = doMagic;
 
 countMovies();
-parseMovies();
