@@ -9,16 +9,61 @@ body {
     font-weight: bold;
 }
 
+.moviesAdder {
+    padding-top: 50px;
+}
+
+ul {
+    border: solid 5px #A49694;
+}
+
+li {
+    border: solid 1px #A49694;
+    margin: 2px;
+}
+
 #moviesCountersContainer {
     float: right;
+    width: auto;
+    border: solid #736B60;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #736B60;
+}
+
+#appLogoContainer {
+    float: left;
+    width: auto;
+    padding-left: 35px;
+}
+
+#appHeader {
+    background-color: #736B60;
+    display: flex;
+    justify-content: space-between;
 }
 
 div#moviesListContainer {
-    margin-top: 100px;
     display: flex;
     justify-content: center;
 }
 
 #moviesList>li:hover {
     color: #EDE7D9;
+}
+
+a:link {
+    color: #A49694;
+}
+
+a:visited {
+    color: #736B60
+}
+
+#formContainer {
+    display: grid;
+    grid-template-columns: 10% 20%;
+    justify-content: center;
+    margin-top: 15px;
 }

@@ -56,8 +56,11 @@ function doMagic(elem) {
         moviesList.movies[item].seen = "T";
         setCounterTo(moviesCounterSeen, (parseInt(moviesCounterSeen.innerText) + 1));
     }
+    moviesList.moviesStorageSync();
 }
 
 window.doMagic = doMagic;
 
+
 countMovies();
+parseMovies();

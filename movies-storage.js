@@ -83,7 +83,6 @@ class MoviesStorage {
             this.movies[this.movies.length] = arg1;
         } else {
             this.movies[this.movies.findIndex(element => element.id === arg1)] = arg2;
-            this.get(arg1);
         }
         this.moviesStorageSync();
     }

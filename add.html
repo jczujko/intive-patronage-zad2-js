@@ -1,11 +1,31 @@
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Intive Patronage Zad 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
-    <div id="moviesCountersContainer">
-        <p>All: <span class="moviesCounter" id="anotherMoviesCounterAll"></span></p>
-        <p>Viewed: <span class="moviesCounter" id="anotherMoviesCounterSeen"></span></p>
+    <div id="appHeader">
+        <div id="appLogoContainer">
+            <h1>MyMovieList</h1>
+        </div>
+        <div id="moviesCountersContainer">
+            <p>All: <span class="moviesCounter" id="anotherMoviesCounterAll"></span></p>
+            <p>Viewed: <span class="moviesCounter" id="anotherMoviesCounterSeen"></span></p>
+        </div>
     </div>
     <div id="formContainer">
-
+        <span>Tite: </span><span><input type="text"></span>
+        <span>Year: </span><span><input type="text"></span>
+        <span>Genre: </span><span><input type="text"></span>
+        <span>Summary: </span><span><input type="text"></span>
+        <button id="movieAddButton">Add</button>
     </div>
+    <script type="module" src=add.js>
+    </script>
 </body>
+
+</html>
