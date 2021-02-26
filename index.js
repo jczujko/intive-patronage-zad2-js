@@ -62,5 +62,5 @@ function doMagic(elem) {
 window.doMagic = doMagic;
 
 
-countMovies();
 parseMovies();
+countMovies();

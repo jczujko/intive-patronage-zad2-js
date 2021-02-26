@@ -1,6 +1,6 @@
 class MoviesStorage {
     constructor(movies = localStorage.getItem("movies")) {
-        if (movies === null) {
+        if (!/^\[.*\]$/.test(movies)) {
             console.log("Movie list empty, importing...");
             this.movies = [{
                     "id": 1,
