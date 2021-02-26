@@ -9,7 +9,7 @@ body {
     font-weight: bold;
 }
 
-.moviesAdder {
+.aHyperlink {
     padding-top: 50px;
 }
 
@@ -66,4 +66,15 @@ a:visited {
     grid-template-columns: 10% 20%;
     justify-content: center;
     margin-top: 15px;
+}
+
+button {
+    color: #4B4237;
+    border-color: #736B60;
+    background-color: #EDE7D9;
+    font-weight: bold;
+}
+
+input {
+    background-color: #EDE7D9;
 }

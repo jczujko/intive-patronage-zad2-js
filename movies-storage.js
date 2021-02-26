@@ -1,6 +1,5 @@
 class MoviesStorage {
-    constructor(movies = null) {
-        this.movies = localStorage.getItem("movies");
+    constructor(movies = localStorage.getItem("movies")) {
         if (movies === null) {
             console.log("Movie list empty, importing...");
             this.movies = [{
@@ -60,10 +59,14 @@ class MoviesStorage {
                     "seen": "F"
                 }
             ];
-            this.moviesStorageSync(JSON.stringify(movies))
+            this.moviesStorageSync()
         } else {
             this.moviesListRefresh();
         }
+    }
+
+    moviesListRefresh() {
+        this.movies = JSON.parse(localStorage.movies);
     }
 
     moviesStorageSync() {

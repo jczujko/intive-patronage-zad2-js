@@ -18,14 +18,18 @@
         </div>
     </div>
     <div id="formContainer">
-        <span>Tite: </span><span><input type="text"></span>
-        <span>Year: </span><span><input type="text"></span>
-        <span>Genre: </span><span><input type="text"></span>
-        <span>Summary: </span><span><input type="text"></span>
-        <button id="movieAddButton">Add</button>
+        <span>Tite: </span><span><input id="formTitle" type="text"></span>
+        <span>Year: </span><span><input id="formYear" type="text"></span>
+        <span>Genre: </span><span><input id="formGenre" type="text"></span>
+        <span>Summary: </span><span><input id="formSummary" type="text"></span>
+        <span>Seen:</span><span><select id="formSeen">
+            <option value="T">YES</option>
+            <option value="F">NO</option>
+        </select></span>
+        <button id="movieAddButton" onclick="validateAddForm()">Add</button>
     </div>
-    <script type="module" src=add.js>
-    </script>
+    <span class="aHyperlink">Back to <a href="index.html">list</a></span>
+    <script type="module" src=add.js></script>
 </body>
 
 </html>
